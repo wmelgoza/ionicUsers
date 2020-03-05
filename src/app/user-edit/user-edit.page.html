@@ -36,5 +36,5 @@
     <ion-input [(ngModel)]="user.last_name" name="last_name" type="text"></ion-input>
   </ion-item>
 
-  <ion-button color="primary" expand="full" (click)="onSubmit()">Submit</ion-button>
+  <ion-button color="primary" expand="full" (click)="onSubmit()" [routerLink]="['/users']">Submit</ion-button>
 </ion-content>

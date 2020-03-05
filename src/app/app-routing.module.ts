@@ -28,16 +28,36 @@ const routes: Routes = [
     loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
   },
   {
-    path: 'user-edit',
+    path: 'user-edit/:userId',
     loadChildren: () => import('./user-edit/user-edit.module').then( m => m.UserEditPageModule)
   },
   {
-    path: 'user-delete',
+    path: 'user-delete/:userId',
     loadChildren: () => import('./user-delete/user-delete.module').then( m => m.UserDeletePageModule)
   },
   {
     path: 'user-create',
     loadChildren: () => import('./user-create/user-create.module').then( m => m.UserCreatePageModule)
+  },
+  {
+    path: 'articles',
+    loadChildren: () => import('./articles/articles.module').then( m => m.ArticlesPageModule)
+  },
+  {
+    path: 'article-create',
+    loadChildren: () => import('./article-create/article-create.module').then( m => m.ArticleCreatePageModule)
+  },
+  {
+    path: 'article-edit/:articleId',
+    loadChildren: () => import('./article-edit/article-edit.module').then( m => m.ArticleEditPageModule)
+  },
+  {
+    path: 'article/:articleId',
+    loadChildren: () => import('./article/article.module').then( m => m.ArticlePageModule)
+  },
+  {
+    path: 'article-delete/:articleId',
+    loadChildren: () => import('./article-delete/article-delete.module').then( m => m.ArticleDeletePageModule)
   }
 ];
 
